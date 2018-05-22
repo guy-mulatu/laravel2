@@ -17,3 +17,12 @@ Route::get('/', function () {
 
 
 Route::get('/index', 'TaskController@index')->name('index');
+
+Route::get('/create', 'TaskController@create')->name('create');
+
+
+
+Route::get('/tables', function(){
+    $tasks = DB::table('tasks')->get();
+    return $tasks;
+});
