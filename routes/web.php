@@ -15,6 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', function () {
-    return view('welcome')->name('home');
-});
+
+Route::get('/index', 'TaskController@index')->name('index');
